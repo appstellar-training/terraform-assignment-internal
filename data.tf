@@ -1,4 +1,3 @@
 data "aws_route53_zone" "appstellar-training" {
-  name         = "appstellar.training"
-  private_zone = true
+  name = "appstellar.training"
 }

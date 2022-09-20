@@ -1,7 +1,7 @@
 resource "aws_route53_record" "www" {
-  zone_id = aws_route53_zone.primary.zone_id
-  name    = "www.example.com"
+  zone_id = data.aws_route53_zone.appstellar-training.zone_id
+  name    = "assignment.appstellar.training"
   type    = "A"
   ttl     = 300
-  records = [aws_eip.lb.public_ip]
+  records = ["8.8.8.8"]
 }
